@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -158,6 +159,7 @@ public class VacationActivity extends AppCompatActivity implements View.OnClickL
                         vacation.setLocation(location);
                         vacation.setStartDate(startDate);
                         vacation.setEndDate(endDate);
+                        MainActivity.vacations = FileSaver.readVacationList();
                         onBackPressed();
                     }
                     else {
@@ -165,6 +167,7 @@ public class VacationActivity extends AppCompatActivity implements View.OnClickL
                         Vacation vacation = new Vacation(vacationName, location, startDate, endDate, events);
 
                         MainActivity.vacations.add(vacation);
+                        MainActivity.vacations = FileSaver.readVacationList();
                         onBackPressed();
                     }
                 }
