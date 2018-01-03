@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.subram43purdue.travelplanner.TransportationEventActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/trans_event_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/trans_event_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/trans_event_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="casual"
+        android:text="Transportation Event"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/background_dark"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/trans_event_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/trans_event_name_text_view"
+        android:layout_width="62dp"
+        android:layout_height="0dp"
+        android:fontFamily="casual"
+        android:text="Event Name:"
+        app:layout_constraintBottom_toBottomOf="@+id/trans_event_name"
+        app:layout_constraintEnd_toEndOf="@+id/trans_event_date_text_view"
+        app:layout_constraintStart_toEndOf="@+id/trans_event_date_text_view"
+        app:layout_constraintTop_toTopOf="@+id/trans_event_name" />
+
+    <TextView
+        android:id="@+id/trans_event_date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginBottom="131dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="131dp"
+        android:fontFamily="casual"
+        android:text="Date:"
+        app:layout_constraintBottom_toBottomOf="@+id/trans_event_mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <TextView
+        android:id="@+id/trans_event_time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="casual"
+        android:text="Time:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_event_date_text_view" />
+
+    <TextView
+        android:id="@+id/trans_event_mode_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:fontFamily="casual"
+        android:text="Mode:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_event_time_text_view" />
+
+    <TextView
+        android:id="@+id/trans_event_origin_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="casual"
+        android:text="Origin:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/trans_event_origin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/trans_event_destination_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="casual"
+        android:text="Destination:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/trans_event_destination"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/trans_event_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/trans_event_date"
+        app:layout_constraintStart_toStartOf="@+id/trans_event_date"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/trans_event_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:focusable="false"
+        android:longClickable="false"
+        app:layout_constraintEnd_toEndOf="@+id/trans_event_time"
+        app:layout_constraintStart_toStartOf="@+id/trans_event_time"
+        app:layout_constraintTop_toBottomOf="@+id/trans_event_name" />
+
+    <EditText
+        android:id="@+id/trans_event_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:focusable="false"
+        android:longClickable="false"
+        app:layout_constraintEnd_toEndOf="@+id/trans_event_mode"
+        app:layout_constraintStart_toStartOf="@+id/trans_event_mode"
+        app:layout_constraintTop_toBottomOf="@+id/trans_event_date" />
+
+    <EditText
+        android:id="@+id/trans_event_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/trans_event_origin"
+        app:layout_constraintStart_toStartOf="@+id/trans_event_origin"
+        app:layout_constraintTop_toBottomOf="@+id/trans_event_time" />
+
+    <EditText
+        android:id="@+id/trans_event_origin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/trans_event_destination"
+        app:layout_constraintStart_toStartOf="@+id/trans_event_destination"
+        app:layout_constraintTop_toBottomOf="@+id/trans_event_mode" />
+
+    <EditText
+        android:id="@+id/trans_event_destination"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trans_event_destination_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/trans_event_origin" />
+
+    <Button
+        android:id="@+id/trans_create_btn"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Create Event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trans_event_destination" />
+
+    <Button
+        android:id="@+id/trans_cancel_btn"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="Cancel"
+        app:layout_constraintBaseline_toBaselineOf="@+id/trans_create_btn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/delete_trans_event_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:layout_editor_absoluteX="312dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.subram43purdue.travelplanner.VacationActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <EditText
+        android:id="@+id/vacation_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/vacation_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vacation_name_text_view" />
+
+    <EditText
+        android:id="@+id/vacation_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/vacation_start_date"
+        app:layout_constraintStart_toStartOf="@+id/vacation_start_date"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/vacation_start_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:focusable="false"
+        android:longClickable="false"
+        app:layout_constraintEnd_toEndOf="@+id/vacation_end_date"
+        app:layout_constraintStart_toStartOf="@+id/vacation_end_date"
+        app:layout_constraintTop_toBottomOf="@+id/vacation_location" />
+
+    <EditText
+        android:id="@+id/vacation_end_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="9dp"
+        android:ems="10"
+        android:focusable="false"
+        android:longClickable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vacation_start_date_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/vacation_start_date" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/vacation_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/new_vacation_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/new_vacation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:layout_marginTop="6dp"
+        android:fontFamily="casual"
+        android:text="New Vacation"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/vacation_name_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vacation_name_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="casual"
+        android:text="Vacation Name:"
+        app:layout_constraintBottom_toBottomOf="@+id/vacation_name"
+        app:layout_constraintEnd_toStartOf="@+id/new_vacation_text"
+        app:layout_constraintStart_toStartOf="@+id/vacation_location_text_view"
+        app:layout_constraintTop_toTopOf="@+id/vacation_name" />
+
+
+    <TextView
+        android:id="@+id/vacation_location_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="casual"
+        android:text="Location:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/vacation_location"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/vacation_start_date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="casual"
+        android:text="Start Date:"
+        app:layout_constraintBottom_toBottomOf="@+id/vacation_start_date"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/vacation_end_date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="casual"
+        android:text="End Date:"
+        app:layout_constraintBottom_toBottomOf="@+id/vacation_end_date"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Cancel"
+        app:layout_constraintEnd_toStartOf="@+id/vacation_end_date"
+        app:layout_constraintStart_toStartOf="@+id/vacation_end_date"
+        app:layout_constraintTop_toBottomOf="@+id/vacation_end_date" />
+
+    <Button
+        android:id="@+id/create_vacation_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Create Vacation"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cancel_btn"
+        app:layout_constraintEnd_toEndOf="@+id/vacation_end_date"
+        app:layout_constraintStart_toEndOf="@+id/cancel_btn" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.subram43purdue.travelplanner.VacationsMainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <EditText
+        android:id="@+id/vacations_main_name_text"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:focusable="false"
+        android:fontFamily="casual"
+        android:longClickable="false"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delete_vacation_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/vacations_main_location_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:longClickable="false"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/vacations_main_dates_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vacations_main_name_text" />
+
+    <EditText
+        android:id="@+id/vacations_main_dates_text"
+        android:layout_width="149dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:focusable="false"
+        android:longClickable="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vacations_main_location_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vacations_main_location_text"
+        app:layout_constraintTop_toTopOf="@+id/vacations_main_location_text" />
+
+    <ImageButton
+        android:id="@+id/delete_vacation_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/vacations_main_location_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vacations_main_name_text"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <Button
+        android:id="@+id/new_transportation_event"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="New Transportation Event"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vacations_main_dates_text" />
+
+    <Button
+        android:id="@+id/new_leisure_event"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="New Leisure Event"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vacations_main_location_text" />
+
+    <TextView
+        android:id="@+id/vacations_main_events_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text=" Events:"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/new_leisure_event"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="153dp" />
+
+    <ListView
+        android:id="@+id/vacations_main_event_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vacations_main_events_text_view" />
+
+</android.support.constraint.ConstraintLayout>
