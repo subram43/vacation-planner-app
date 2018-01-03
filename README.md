@@ -1,5 +1,5 @@
 # Vacation Planner App
-This is my repository for a vacation planner app which I created using Android Studio with java and xml. People can use this application to plan out their travel when they are going on vacations and neatly organize their plans all in one place! In my implementation of the code for this project, I utilized many of the core concepts of java and object-oriented programming, including Inheritance, Polymorphism, GUI Programming, Exception Handling, Object I/O, Dynamic Data Structures, and much more.
+This is my repository for a vacation planner app which I created using Android Studio with java and xml. People can use this application to plan out their travel when they are going on vacations and neatly organize their plans all in one place! **One thing the user MUST do for the app to work properly is go into the app settings and turn on storage permissions** In my implementation of the code for this project, I utilized many of the core concepts of java and object-oriented programming, including Inheritance, Polymorphism, GUI Programming, Exception Handling, Object I/O, Dynamic Data Structures, and much more.
 
 ## JavaDoc
 The link for the javadoc of this project is *file:///Users/subram43/Android%20Studio%20Projects/TravelPlanner/index.html*
