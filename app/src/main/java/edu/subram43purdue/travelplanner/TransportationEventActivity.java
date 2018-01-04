@@ -163,8 +163,14 @@ public class TransportationEventActivity extends AppCompatActivity implements Vi
             case R.id.delete_trans_event_btn:
                 /*
                 If the user clicks the delete button to delete a transportation event, we pop an alert dialog to confirm
-                with the user that it is okay to delete the event, and remove it from the events array list if it is
+                with the user that it is okay to delete the event, and remove it from the events array list if it is. However,
+                if this activity is started to create a new event, we don't set an on click listener for this delete button because
+                they shouldn't be allowed to delete an event that doesn't exist
                  */
+                if(passedEventIndex == -1) {
+                    break;
+                }
+
                 AlertDialog alertDialog = new AlertDialog.Builder(TransportationEventActivity.this).create();
                 alertDialog.setTitle("Confirm");
                 alertDialog.setMessage("Are you sure you want to delete this item?");
